@@ -8,7 +8,7 @@ return {
     --font = wezterm.font(font),
     --font_size = font_size,
     font = wezterm.font_with_fallback {
-        { family = "Operator Mono SSm", weight = "DemiLight", stretch = "Normal", style = "Italic" },
+        --{ family = "Operator Mono SSm", weight = "DemiLight", stretch = "Normal", style = "Italic" },
         { family = "Sarasa Term SC Nerd", weight = "DemiBold", stretch = "Normal", style = "Italic" },
     },
 

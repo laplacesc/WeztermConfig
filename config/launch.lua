@@ -6,16 +6,14 @@ local options = {
 }
 
 if platform.is_win then
-    options.default_prog = { 'pwsh', '-NoLogo' }
+    options.default_prog = { 'tssh' }
     options.launch_menu = {
+        { label = 'Trzsz ssh', args = { 'tssh' } },
         { label = 'PowerShell Core', args = { 'pwsh', '-NoLogo' } },
         { label = 'PowerShell Desktop', args = { 'powershell' } },
         { label = 'Command Prompt', args = { 'cmd' } },
         { label = 'Nushell', args = { 'nu' } },
-        {
-            label = 'Git Bash',
-            args = { 'C:\\Users\\kevin\\scoop\\apps\\git\\current\\bin\\bash.exe' },
-        },
+        { label = 'Git Bash', args = { 'C:\\develop\\git\\bin\\bash.exe' }, },
     }
 elseif platform.is_mac then
     options.default_prog = { '/opt/homebrew/bin/fish', '-l' }

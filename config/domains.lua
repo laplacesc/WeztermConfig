@@ -12,7 +12,7 @@ return {
             distribution = 'Ubuntu-24.04',
             username = 'root',
             default_cwd = '~',
-            default_prog = {},
+            default_prog = { 'bash' },
         },
     },
 }
