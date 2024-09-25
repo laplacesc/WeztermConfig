@@ -2,9 +2,13 @@
 
 ## Installation
 
+### WezTerm
+
+<https://wezfurlong.org/wezterm/install/windows.html>
+
 ### Powershell
 
-<https://learn.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4#installing-the-msi-package>
+<https://learn.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows>
 
 ### Trzsz-ssh
 
