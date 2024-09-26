@@ -2,6 +2,14 @@
 
 ## Installation
 
+### Config
+
+```bash
+cmd
+
+git clone https://github.com/laplacesc/Wezterm-Config.git %USERPROFILE%/.config/wezterm
+```
+
 ### WezTerm
 
 <https://wezfurlong.org/wezterm/install/windows.html>
@@ -14,13 +22,9 @@
 
 <https://github.com/trzsz/trzsz-ssh/releases>
 
-### Config
+### Sarasa Term SC Nerd 字体
 
-```bash
-cmd
-
-git clone https://github.com/laplacesc/Wezterm-Config.git %USERPROFILE%/.config/wezterm
-```
+<https://github.com/laishulu/Sarasa-Term-SC-Nerd>
 
 ## References
 
