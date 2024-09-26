@@ -29,3 +29,4 @@ git clone https://github.com/laplacesc/Wezterm-Config.git %USERPROFILE%/.config/
 ## References
 
 <https://github.com/KevinSilvester/wezterm-config>
+<https://github.com/QianSong1/wezterm-config>
