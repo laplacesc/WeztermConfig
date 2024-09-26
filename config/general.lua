@@ -7,6 +7,8 @@ return {
 
     scrollback_lines = 5000,
 
+    canonicalize_pasted_newlines = "LineFeed",
+
     hyperlink_rules = {
         -- Matches: a URL in parens: (URL)
         {
