@@ -6,7 +6,7 @@ local options = {
 }
 
 if platform.is_win then
-    options.default_prog = { 'tssh' }
+    options.default_prog = { 'cmd' }
     options.launch_menu = {
         { label = 'Trzsz ssh', args = { 'tssh' } },
         { label = 'PowerShell Core', args = { 'pwsh', '-NoLogo' } },
