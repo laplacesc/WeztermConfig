@@ -5,6 +5,9 @@ local platform = require('utils.platform')
 --local font_size = platform().is_mac and 12 or 9
 
 return {
+    font_dirs = { 'fonts' },
+    font_locator = 'ConfigDirsOnly',
+
     --font = wezterm.font(font),
     --font_size = font_size,
     font = wezterm.font_with_fallback {
