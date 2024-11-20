@@ -47,18 +47,31 @@ config = {
 local act = wezterm.action
 
 config.keys = {
+    -- 显示启动菜单
+    { key = 'l', mods = 'ALT', action = act.ShowLauncher },
     -- 切换面板缩放状态
     { key = 'Enter', mods = 'ALT', action = act.TogglePaneZoomState },
     -- 显示选项卡导航
-    { key = 'e', mods = 'CTRL|SHIFT', action = act.ShowTabNavigator },
+    { key = 'D', mods = 'CTRL|SHIFT', action = act.ShowTabNavigator },
     -- 关闭当前窗格
-    { key = 'w', mods = 'CTRL|SHIFT', action = act.CloseCurrentPane({ confirm = false }) },
+    { key = 'W', mods = 'CTRL|SHIFT', action = act.CloseCurrentPane({ confirm = false }) },
     -- 垂直分割
-    { key = 'd', mods = 'ALT|SHIFT', action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+    { key = 'D', mods = 'ALT|SHIFT', action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
     -- 水平分割
-    { key = 'h', mods = 'ALT|SHIFT', action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-    -- 显示启动菜单
-    { key = 'l', mods = 'ALT', action = act.ShowLauncher },
+    { key = 'H', mods = 'ALT|SHIFT', action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+    -- 修改当前选项卡标题
+    {
+        key = 'E',
+        mods = 'CTRL|SHIFT',
+        action = act.PromptInputLine {
+            description = 'Enter new name for tab',
+            action = wezterm.action_callback(function(window, pane, line)
+                if line then
+                    window:active_tab():set_title(line)
+                end
+            end),
+        },
+    },
 }
 
 local ssh_config = wezterm.config_dir .. "/config"
