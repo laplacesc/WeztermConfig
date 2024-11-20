@@ -60,18 +60,16 @@ config.keys = {
     { key = 'l', mods = 'ALT', action = act.ShowLauncher },
 }
 
-local launch_menu = {}
+config.launch_menu = {}
 
 for line in io.lines(wezterm.config_dir .. "/config") do
     if string.find(line, "Host ") ~= nil then
-        table.insert(launch_menu, {
+        table.insert(config.launch_menu, {
             label = string.sub(line, 6),
             args = { 'tssh', '-F', '.config/wezterm/config', string.sub(line, 6) },
         })
     end
 end
-
-config.launch_menu = launch_menu
 
 wezterm.log_info(config.launch_menu)
 
