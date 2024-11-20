@@ -1,10 +1,10 @@
 local wezterm = require("wezterm")
 local mux = wezterm.mux
 
-wezterm.on('gui-startup', function(cmd)
-    local tab, pane, window = mux.spawn_window(cmd or {})
-    window:gui_window():maximize()
-end)
+--wezterm.on('gui-startup', function(cmd)
+--    local tab, pane, window = mux.spawn_window(cmd or {})
+--    window:gui_window():maximize()
+--end)
 
 config = wezterm.config_builder()
 
@@ -45,6 +45,8 @@ config = {
         top = 0,
         bottom = 0,
     },
+    initial_cols = 120,
+    initial_rows = 40,
 }
 
 local act = wezterm.action
@@ -55,6 +57,22 @@ config.keys = {
     { key = 'w', mods = 'CTRL|SHIFT', action = act.CloseCurrentPane({ confirm = false }) },
     { key = 'd', mods = 'ALT|SHIFT', action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
     { key = 'h', mods = 'ALT|SHIFT', action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+    { key = 'l', mods = 'ALT', action = wezterm.action.ShowLauncher },
+}
+
+config.launch_menu = {
+    {
+        label = '97',
+        args = { 'tssh', '97' },
+    },
+    {
+        label = '41',
+        args = { 'tssh', '41' },
+    },
+    {
+        label = '101',
+        args = { 'tssh', '41' },
+    },
 }
 
 return config
