@@ -47,13 +47,14 @@ config = {
     },
 }
 
+local act = wezterm.action
+
 config.keys = {
-    { key = 'E', mods = 'CTRL|SHIFT', action = wezterm.action.ShowTabNavigator },
-    { key = 'Enter', mods = 'ALT', action = wezterm.action.TogglePaneZoomState },
-    { key = 'w', mods = 'CTRL|SHIFT', action = wezterm.action.CloseCurrentTab({ confirm = false }) },
-    { key = 'w', mods = 'ALT', action = wezterm.action.CloseCurrentPane({ confirm = false }) },
-    { key = 'v', mods = 'ALT|SHIFT', action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
-    { key = 'h', mods = 'ALT|SHIFT', action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+    { key = 'Enter', mods = 'ALT', action = act.TogglePaneZoomState },
+    { key = 'E', mods = 'CTRL|SHIFT', action = act.ShowTabNavigator },
+    { key = 'w', mods = 'CTRL|SHIFT', action = act.CloseCurrentPane({ confirm = false }) },
+    { key = 'v', mods = 'ALT|SHIFT', action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+    { key = 'h', mods = 'ALT|SHIFT', action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 }
 
 return config
