@@ -7,6 +7,7 @@ config = {
     automatically_reload_config = true,
     -- 标签栏
     enable_tab_bar = true,
+    hide_tab_bar_if_only_one_tab = true,
     -- 关闭窗口时无需确认
     window_close_confirmation = "NeverPrompt",
     -- 移除顶部三个图标的栏，但仍可以调整大小
