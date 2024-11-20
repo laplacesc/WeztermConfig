@@ -63,10 +63,10 @@ config.keys = {
 config.launch_menu = {}
 
 for line in io.lines(wezterm.config_dir .. "/config") do
-    if string.find(line, "Host ") ~= nil then
+    for host in string.gmatch(line, "Host%s+([^%s]+)%s*") do
         table.insert(config.launch_menu, {
-            label = string.sub(line, 6),
-            args = { 'tssh', '-F', '.config/wezterm/config', string.sub(line, 6) },
+            label = host,
+            args = { 'tssh', '-F', wezterm.config_dir .. "/config", host },
         })
     end
 end

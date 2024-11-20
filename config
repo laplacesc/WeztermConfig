@@ -1,11 +1,11 @@
 
-Host 97
+Host 97 10.182.139.97
     HostName 10.182.139.97
     Port 22
     User root
     Password hillstone2021
 
-Host 41
+Host 41 10.185.224.41
     HostName 10.185.224.41
     Port 22
     User root
