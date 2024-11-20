@@ -5,7 +5,7 @@ config = wezterm.config_builder()
 config = {
     -- 自动加载配置
     automatically_reload_config = true,
-    -- 关闭标签栏
+    -- 标签栏
     enable_tab_bar = true,
     -- 关闭窗口时无需确认
     window_close_confirmation = "NeverPrompt",
@@ -47,11 +47,11 @@ local act = wezterm.action
 
 config.keys = {
     { key = 'Enter', mods = 'ALT', action = act.TogglePaneZoomState },
-    { key = 'E', mods = 'CTRL|SHIFT', action = act.ShowTabNavigator },
+    { key = 'e', mods = 'CTRL|SHIFT', action = act.ShowTabNavigator },
     { key = 'w', mods = 'CTRL|SHIFT', action = act.CloseCurrentPane({ confirm = false }) },
     { key = 'd', mods = 'ALT|SHIFT', action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
     { key = 'h', mods = 'ALT|SHIFT', action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-    { key = 'l', mods = 'ALT', action = wezterm.action.ShowLauncher },
+    { key = 'l', mods = 'ALT', action = act.ShowLauncher },
 }
 
 config.launch_menu = {
