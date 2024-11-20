@@ -60,22 +60,24 @@ config.keys = {
     { key = 'l', mods = 'ALT', action = act.ShowLauncher },
 }
 
+local ssh_config = wezterm.config_dir .. "/config"
+
 config.launch_menu = {
     {
         label = "tssh",
-        args = { 'tssh', '-F', wezterm.config_dir .. "/config" },
+        args = { 'tssh', '-F', ssh_config },
     },
     {
         label = "tssh add new host",
-        args = { 'tssh', '-F', wezterm.config_dir .. "/config", "--new-host" },
+        args = { 'tssh', '-F', ssh_config, "--new-host" },
     },
 }
 
-for line in io.lines(wezterm.config_dir .. "/config") do
+for line in io.lines(ssh_config) do
     for host in string.gmatch(line, "Host%s+([^%s]+)%s*") do
         table.insert(config.launch_menu, {
             label = host,
-            args = { 'tssh', '-F', wezterm.config_dir .. "/config", host },
+            args = { 'tssh', '-F', ssh_config, host },
         })
     end
 end
