@@ -60,7 +60,16 @@ config.keys = {
     { key = 'l', mods = 'ALT', action = act.ShowLauncher },
 }
 
-config.launch_menu = {}
+config.launch_menu = {
+    {
+        label = "tssh",
+        args = { 'tssh', '-F', wezterm.config_dir .. "/config" },
+    },
+    {
+        label = "tssh add new host",
+        args = { 'tssh', '-F', wezterm.config_dir .. "/config", "--new-host" },
+    },
+}
 
 for line in io.lines(wezterm.config_dir .. "/config") do
     for host in string.gmatch(line, "Host%s+([^%s]+)%s*") do
@@ -71,6 +80,13 @@ for line in io.lines(wezterm.config_dir .. "/config") do
     end
 end
 
-wezterm.log_info(config.launch_menu)
+wezterm.on('format-tab-title', function(tab)
+    local pane = tab.active_pane
+    local title = pane.title
+    if pane.domain_name then
+        title = title .. ' - (' .. pane.domain_name .. ')'
+    end
+    return title
+end)
 
 return config
