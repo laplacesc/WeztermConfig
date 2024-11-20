@@ -53,7 +53,7 @@ config.keys = {
     { key = 'Enter', mods = 'ALT', action = act.TogglePaneZoomState },
     { key = 'E', mods = 'CTRL|SHIFT', action = act.ShowTabNavigator },
     { key = 'w', mods = 'CTRL|SHIFT', action = act.CloseCurrentPane({ confirm = false }) },
-    { key = 'v', mods = 'ALT|SHIFT', action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+    { key = 'd', mods = 'ALT|SHIFT', action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
     { key = 'h', mods = 'ALT|SHIFT', action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 }
 
