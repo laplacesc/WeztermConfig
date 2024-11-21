@@ -61,6 +61,12 @@ config.keys = {
     { key = 'D', mods = 'ALT|SHIFT', action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
     -- 水平分割
     { key = 'H', mods = 'ALT|SHIFT', action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+    -- 切换选项卡
+    { key = '[', mods = 'ALT', action = act.ActivateTabRelative(-1) },
+    { key = ']', mods = 'ALT', action = act.ActivateTabRelative(1) },
+    -- 移动选项卡
+    { key = '[', mods = 'CTRL|ALT', action = act.MoveTabRelative(-1) },
+    { key = ']', mods = 'CTRL|ALT', action = act.MoveTabRelative(1) },
     -- 修改当前选项卡标题
     {
         key = 'E',
