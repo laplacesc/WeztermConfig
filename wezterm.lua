@@ -106,6 +106,7 @@ for line in io.lines(ssh_config) do
     end
 end
 
+-- 会导致修改选项卡标题后刷新回原来的
 wezterm.on('format-tab-title', function(tab)
     local pane = tab.active_pane
     local title = pane.title
