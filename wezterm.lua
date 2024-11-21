@@ -5,6 +5,8 @@ config = wezterm.config_builder()
 config = {
     -- 自动加载配置
     automatically_reload_config = true,
+    -- 任何样式的换行符都将被重写为LF
+    canonicalize_pasted_newlines = "LineFeed",
     -- 标签栏
     enable_tab_bar = true,
     hide_tab_bar_if_only_one_tab = true,
