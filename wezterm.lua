@@ -77,7 +77,16 @@ config.keys = {
 local tssh = wezterm.config_dir .. "/tssh.exe"
 local ssh_config = wezterm.config_dir .. "/config"
 
+config.default_prog = { tssh, '-F', ssh_config }
 config.launch_menu = {
+    {
+        label = "cmd",
+        args = { "cmd" },
+    },
+    {
+        label = "powershell",
+        args = { "powershell" },
+    },
     {
         label = "tssh",
         args = { tssh, '-F', ssh_config },
