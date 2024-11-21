@@ -99,7 +99,7 @@ config.launch_menu = {
 
 --[[
 curl -fsSL "https://sh.wlnmp.com/wlnmp.sh" | bash
-sudo yum install trzsz
+sudo yum install trzsz -y
  ]]
 
 for line in io.lines(ssh_config) do
