@@ -1,18 +1,18 @@
 
-Host 97 10.182.139.97
+Host 97
     HostName 10.182.139.97
     Port 22
     User root
-    Password hillstone2021
+    #!! encPassword 009f7d1aca777513b8d792737d5be782a7a8839e8cc2400ca0b8f9623f114288e41bd3a8f2b78329c2
 
-Host 41 10.185.224.41
+Host 41
     HostName 10.185.224.41
     Port 22
     User root
-    Password hillstone
+    #!! encPassword 9afa0b9264c1647d86bae4720f894443590640837fc469f7249f871c468a116b97ea95a515
 
-Host 111
-    HostName 111.111.111.111
+Host 101
+    HostName 10.182.220.101
     Port 22
     User root
-    Password hillstone
+    #!! encPassword 5b5311fc0820e4b8dbbfef5f1e3e692692789e1aaf2d19f6f665f02288f363491d740c48e8
