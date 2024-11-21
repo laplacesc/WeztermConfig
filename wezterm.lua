@@ -97,8 +97,10 @@ config.launch_menu = {
     },
 }
 
--- curl -fsSL "https://sh.wlnmp.com/wlnmp.sh" | bash
--- sudo yum install trzsz
+--[[
+curl -fsSL "https://sh.wlnmp.com/wlnmp.sh" | bash
+sudo yum install trzsz
+ ]]
 
 for line in io.lines(ssh_config) do
     for host in string.gmatch(line, "Host%s+([^%s]+)%s*") do
