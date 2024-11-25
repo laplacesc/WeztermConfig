@@ -119,11 +119,4 @@ for line in io.lines(ssh_config) do
     end
 end
 
-config.set_environment_variables = {
-    -- This changes the default prompt for cmd.exe to report the
-    -- current directory using OSC 7, show the current time and
-    -- the current directory colored in the prompt.
-    prompt = 'echo -ne "\033]0;固定的服务器标题\007"'
-}
-
 return config
