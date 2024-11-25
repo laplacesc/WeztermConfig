@@ -119,14 +119,11 @@ for line in io.lines(ssh_config) do
     end
 end
 
--- 会导致修改选项卡标题后刷新回原来的
-wezterm.on('format-tab-title', function(tab)
-    local pane = tab.active_pane
-    local title = pane.title
-    if pane.domain_name then
-        title = title .. ' - (' .. pane.domain_name .. ')'
-    end
-    return title
-end)
+config.set_environment_variables = {
+    -- This changes the default prompt for cmd.exe to report the
+    -- current directory using OSC 7, show the current time and
+    -- the current directory colored in the prompt.
+    prompt = 'echo -ne "\033]0;固定的服务器标题\007"'
+}
 
 return config
